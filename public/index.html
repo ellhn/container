@@ -52,7 +52,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
-      System.import('/static/js/bundle.js')
+      System.import('<%= htmlWebpackPlugin.files.js[0] %>');
     </script>
   </body>
 </html>

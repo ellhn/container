@@ -7,8 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import {registerMfe} from "./test-mfe";
 import "./set-public-path";
 
-console.log('here')
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
