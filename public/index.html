@@ -25,10 +25,15 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.3/system.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.3/system.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.8.3/extras/amd.js"></script>
     <script type="systemjs-importmap">
       {
-          "imports": {"axios": "https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"}
+          "imports": {
+            "axios": "https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js",
+            "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.development.js",
+            "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.development.js"
+          }
       }
     </script>
   </head>
@@ -46,5 +51,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      System.import('<%= htmlWebpackPlugin.files.js[0] %>');
+    </script>
   </body>
 </html>

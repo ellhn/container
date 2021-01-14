@@ -1,3 +1,6 @@
-import { setPublicPath } from "systemjs-webpack-interop";
+// I commented this because it seems you're setting the public path
+// at build-time instead of runtime.
 
-setPublicPath("@react-app-container");
+// import { setPublicPath } from "systemjs-webpack-interop";
+
+// setPublicPath("@react-app-container");
